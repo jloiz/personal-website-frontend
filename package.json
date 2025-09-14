@@ -7,7 +7,9 @@
     "lint:fix": "eslint --fix"
   },
   "dependencies": {
+    "@heroui/react": "^2.8.4",
     "@tailwindcss/postcss": "^4.1.13",
+    "framer-motion": "^12.23.12",
     "jiti": "^2.5.1",
     "next": "^15.5.2",
     "pnpm": "^10.15.1",
