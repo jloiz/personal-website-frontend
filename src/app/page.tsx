@@ -1,6 +1,6 @@
 "use client";
 
-import "../styles/global.css";
+import "../styles/globals.css";
 import { Button } from "@heroui/react";
 
 export default function Page() {
