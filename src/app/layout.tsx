@@ -12,6 +12,11 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body>
         <Provider>
+          <div className="titleItem text-6xl font-bold">
+            <h1 >
+              Joshua Loizou
+            </h1>
+          </div>
           <Navbar shouldHideOnScroll isBordered>
             <NavbarBrand></NavbarBrand>
             <NavbarContent className="hidden sm:flex gap-4" justify="center">

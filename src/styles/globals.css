@@ -11,6 +11,27 @@ html {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  text-shadow: 3px 3px 3px #ababab;
+  /*text-shadow: 3px 3px 3px #ababab;*/
+}
+
+.titleItem {
+    position: relative;
+    text-shadow: 3px 3px 3px #ababab;
+    text-align: center;
+    /*overflow: hidden;*/
+}
+
+.titleItem::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../../public/binary_2.png");
+    filter: brightness(50%);
+    z-index: 0;
+}
+
+.titleItem h1 {
+    position: relative;
+    z-index: 1;
 }
 
