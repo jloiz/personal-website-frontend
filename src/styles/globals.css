@@ -16,7 +16,6 @@ html {
 
 .titleItem {
     position: relative;
-    text-shadow: 3px 3px 3px #ababab;
     text-align: center;
     /*overflow: hidden;*/
 }
@@ -25,12 +24,13 @@ html {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url("../../public/binary_2.png");
+    background-image: url("../../public/binary_3.png");
     filter: brightness(50%);
     z-index: 0;
 }
 
 .titleItem h1 {
+    text-shadow: 3px 3px 3px #ababab;
     position: relative;
     z-index: 1;
 }

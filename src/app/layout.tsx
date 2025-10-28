@@ -1,7 +1,7 @@
 "use client";
 
 import { Provider } from "./provider";
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link } from "@heroui/react";
+import { NavigationBar } from "../components/navigation-bar";
 
 export default function RootLayout({
   children,
@@ -12,37 +12,21 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body>
         <Provider>
-          <div className="titleItem text-6xl font-bold">
-            <h1 >
-              Joshua Loizou
-            </h1>
+          <div className="flex flex-col min-h-screen">
+            <div className="flex-grow">
+              <div className="titleItem text-6xl font-bold">
+                <h1 >
+                  Joshua Loizou
+                </h1>
+              </div>
+              <NavigationBar/>
+              {children}
+            </div>
+            <footer>
+              Test footer text
+            </footer>
           </div>
-          <Navbar shouldHideOnScroll isBordered>
-            <NavbarBrand></NavbarBrand>
-            <NavbarContent className="hidden sm:flex gap-4" justify="center">
-              <NavbarItem>
-                <Link href="#">
-                  Profile
-                </Link>
-              </NavbarItem>
-              <NavbarItem>
-                <Link href="#">
-                  Projects
-                </Link>
-              </NavbarItem>
-              <NavbarItem>
-                <Link href="#">
-                  Blog
-                </Link>
-              </NavbarItem>
-              <NavbarItem>
-                <Link href="#">
-                  Docs
-                </Link>
-              </NavbarItem>
-            </NavbarContent>
-          </Navbar>
-          {children}
+          // ToDo: If content gets too long move the footer back to here
         </Provider>
       </body>
     </html>
