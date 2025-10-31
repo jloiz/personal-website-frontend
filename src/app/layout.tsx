@@ -2,6 +2,7 @@
 
 import { Provider } from "./provider";
 import { NavigationBar } from "../components/navigation-bar";
+import Footer from "../components/footer";
 
 export default function RootLayout({
   children,
@@ -22,11 +23,9 @@ export default function RootLayout({
               <NavigationBar/>
               {children}
             </div>
-            <footer>
-              Test footer text
-            </footer>
+            <Footer/>
           </div>
-          // ToDo: If content gets too long move the footer back to here
+          {/*ToDo: If content gets too long move the footer back to here*/}
         </Provider>
       </body>
     </html>
