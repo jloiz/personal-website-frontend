@@ -1,5 +1,7 @@
 "use client";
 
+import "../styles/globals.css";
+
 import { Provider } from "./provider";
 import { NavigationBar } from "../components/navigation-bar";
 import Footer from "../components/footer";

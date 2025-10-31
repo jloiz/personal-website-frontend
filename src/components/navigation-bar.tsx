@@ -6,7 +6,12 @@ export function NavigationBar() {
       <NavbarBrand></NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link href="#">
+          <Link href="/">
+            Home
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link href="/profile">
             Profile
           </Link>
         </NavbarItem>
