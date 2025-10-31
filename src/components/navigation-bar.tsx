@@ -17,7 +17,7 @@ export function NavigationBar() {
         </NavbarItem>
         <NavbarItem>
           <Link href="#">
-            Blog
+            Articles
           </Link>
         </NavbarItem>
         <NavbarItem>
