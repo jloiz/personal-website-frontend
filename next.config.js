@@ -3,9 +3,9 @@ const nextConfig = {
   output: 'export',
   basePath: `/${repo}`,
   assetPrefix: `/${repo}/`,
-  trailingSlash: true, // optional but recommended for Pages
+  trailingSlash: true,
   images: {
-    unoptimized: true, // helps for static export
+    unoptimized: true,
   },
 };
 
