@@ -1,7 +1,5 @@
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link } from "@heroui/react";
-const base = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
-console.log(base)
 export function NavigationBar() {
   return (
     <Navbar shouldHideOnScroll isBordered>
@@ -13,22 +11,22 @@ export function NavigationBar() {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href={`${base}/profile`}>
+          <Link href={`/profile`}>
             Profile
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href={`${base}/projects`}>
+          <Link href={`/projects`}>
             Projects
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="#">
+          <Link href="/articles">
             Articles
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="#">
+          <Link href="/docs">
             Docs
           </Link>
         </NavbarItem>
