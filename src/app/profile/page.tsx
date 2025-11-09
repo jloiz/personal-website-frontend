@@ -1,5 +1,5 @@
 "use client";
-
+// ToDo add path alias
 import ComingSoon from "../../components/coming-soon";
 
 export default function () {
