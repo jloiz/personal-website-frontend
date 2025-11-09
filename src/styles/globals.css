@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Alan+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Doto:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alan+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Doto:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&display=swap");
 
 @import "tailwindcss";
 
@@ -11,11 +11,11 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-    --font-roboto: 'Roboto';
-    --font-alan-sans: 'Alan Sans';
-    --font-pixel: 'Doto';
-    --font-orbitron: 'Orbitron';
-    --font-oxanium: 'Oxanium'
+  --font-roboto: "Roboto";
+  --font-alan-sans: "Alan Sans";
+  --font-pixel: "Doto";
+  --font-orbitron: "Orbitron";
+  --font-oxanium: "Oxanium";
 }
 
 html {
@@ -25,25 +25,23 @@ html {
   font-style: normal;
 }
 
-
 .titleItem {
-    position: relative;
-    text-align: center;
-    /*overflow: hidden;*/
+  position: relative;
+  text-align: center;
+  /*overflow: hidden;*/
 }
 
 .titleItem::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url("../../public/binary_3.png");
-    filter: brightness(50%);
-    z-index: 0;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../../public/binary_3.png");
+  filter: brightness(50%);
+  z-index: 0;
 }
 
 .titleItem h1 {
-    text-shadow: 3px 3px 3px #ababab;
-    position: relative;
-    z-index: 1;
+  text-shadow: 3px 3px 3px #ababab;
+  position: relative;
+  z-index: 1;
 }
-

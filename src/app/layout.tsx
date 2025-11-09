@@ -18,14 +18,12 @@ export default function RootLayout({
           <div className="flex flex-col min-h-screen">
             <div className="flex-grow">
               <div className="titleItem text-6xl font-bold">
-                <h1 >
-                  Joshua Loizou
-                </h1>
+                <h1>Joshua Loizou</h1>
               </div>
-              <NavigationBar/>
+              <NavigationBar />
               {children}
             </div>
-            <Footer/>
+            <Footer />
           </div>
           {/*ToDo: If content gets too long move the footer back to here*/}
         </Provider>
