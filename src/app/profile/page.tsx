@@ -9,7 +9,7 @@ export default function () {
         <h1 className="mt-5 text-3xl font-bold underline">Profile</h1>
       </div>
       <>
-        <ComingSoon pageTitle={"Projects"} />
+        <ComingSoon pageTitle={"Profile"} />
       </>
     </>
   );
