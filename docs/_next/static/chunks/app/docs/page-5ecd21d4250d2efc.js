@@ -1,1 +1,0 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[40],{5479:(e,n,s)=>{"use strict";s.r(n),s.d(n,{default:()=>c});var t=s(4928);function c(){return(0,t.jsx)("p",{children:"Documents Page content coming soon!"})}},6701:(e,n,s)=>{Promise.resolve().then(s.bind(s,5479))}},e=>{e.O(0,[790,72,358],()=>e(e.s=6701)),_N_E=e.O()}]);
