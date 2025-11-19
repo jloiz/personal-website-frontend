@@ -8,7 +8,7 @@ export default function ComingSoon({ pageTitle }: PropTypes) {
   return (
     <>
       <div className="flex flex-row item-center mt-8 justify-center">
-        <p>{`${pageTitle} Page content coming soon!`}</p>
+        <p>{`${pageTitle} page content coming soon!`}</p>
       </div>
       <div className="flex flex-row item-center mt-8 justify-center">
         <Image

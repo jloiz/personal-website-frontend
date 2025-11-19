@@ -1,6 +1,11 @@
 "use client";
 
+import NavTile from "../components/nav-tile";
+
 export default function Page() {
+  // ToDo: Move to constants and dynamically render with navbar
+  const pages: string[] = ["profile", "profile", "articles", "docs"];
+
   return (
     <>
       <div className="flex flex-row item-center mb-2; justify-center">
@@ -8,11 +13,19 @@ export default function Page() {
       </div>
       <div className="flex flex-row item-center mt-8 justify-center">
         <br />
-        <p className="text-center">
-          Welcome to my personal site. This is a next.js project, using heroUI.
-          Feel free to explore the code and other projects on my GitHub using
-          the link in the footer of this page.
+        <p className="text-center mb-8">
+          Welcome to my personal site. This is a one of my personal projects.
+          Feel free to explore this site and view my projects, academic works
+          and articles.
         </p>
+      </div>
+      <div className="flex flex-row item-center justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 ">
+          {pages.map((page) => {
+            return <NavTile pageName={page}/>;
+          })}
+        </div>
+
       </div>
     </>
   );
