@@ -4,7 +4,7 @@ import NavTile from "../components/nav-tile";
 
 export default function Page() {
   // ToDo: Move to constants and dynamically render with navbar
-  const pages: string[] = ["profile", "profile", "articles", "docs"];
+  const pages: string[] = ["Profile", "Projects", "Articles", "Docs"];
 
   return (
     <>
@@ -19,8 +19,8 @@ export default function Page() {
           and articles.
         </p>
       </div>
-      <div className="flex flex-row item-center justify-center">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 ">
+      <div className="flex flex-row item-center justify-center px-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full px-2 sm:px-16">
           {pages.map((page) => {
             return <NavTile pageName={page}/>;
           })}
