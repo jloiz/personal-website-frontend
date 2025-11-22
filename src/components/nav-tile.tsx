@@ -13,34 +13,29 @@ interface PropTypes {
 
 export default function NavTile({ pageName }: PropTypes) {
   const router = useRouter()
+  const pageNameLower = pageName.toLowerCase()
+  const navItemColour = "#0077FF"
+  const spriteMap = {
+
+    "projects": <CodeIcon colour={navItemColour} />,
+
+  }
+
   return (
     <>
-      <Card isPressable onPress={() => router.push(`/${pageName.toLowerCase()}`)}>
+      <Card
+        isPressable
+        isHoverable={true}
+        onPress={() => router.push(`/${pageNameLower}`)}
+      >
         <CardHeader className="item-center justify-center">
           {pageName}
         </CardHeader>
         <Divider />
         <CardBody className="flex flex-col items-center justify-center overflow-visible py-2 w-full">
-        {/*<Image*/}
-        {/*  className="items-center justify-center"*/}
-        {/*    isBlurred*/}
-        {/*    removeWrapper*/}
-        {/*    src={"/fallback.png"}*/}
-        {/*    alt={"placeholder image"}*/}
-        {/*    width={100}*/}
-        {/*  />*/}
-          <CodeIcon></CodeIcon>
+          {spriteMap[pageName.toLowerCase()]}
         </CardBody>
-        {/*<Image*/}
-        {/*  className="items-center justify-center"*/}
-        {/*  removeWrapper*/}
-        {/*  src={"/fallback.png"}*/}
-        {/*  alt={"placeholder image"}*/}
-        {/*  // width={100}*/}
-        {/*/>*/}
-
       </Card>
-
     </>
   );
 }

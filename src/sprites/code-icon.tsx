@@ -1,4 +1,10 @@
-export default function CodeIcon() {
+import GlowEffect from "./effects/glow-effect";
+
+interface PropTypes {
+  colour: string;
+}
+
+export default function CodeIcon({colour} : PropTypes ) {
   // This is a customised version of the lucide-react icon
 
   return (
@@ -9,24 +15,14 @@ export default function CodeIcon() {
       viewBox="0 0 24 24"
       fill="none"
       style={{ overflow: "visible" }}
-      stroke="currentColor"
+      stroke={colour}
       stroke-width="2"
       stroke-linecap="round"
       stroke-linejoin="round"
       className="lucide lucide-code-xml-icon lucide-code-xml"
     >
-      {/*Define ombre effect*/}
-      <defs>
-        <filter id="outerGlow" x="-100%" y="-50%" width="300%" height="200%">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="1.75" result="blur" />
-          <feFlood floodColor={"currentColor"} />
-          <feComposite in2="blur" operator="in" result="glow" />
-          <feMerge>
-            <feMergeNode in="glow" />
-            <feMergeNode in="SourceGraphic" />
-          </feMerge>
-        </filter>
-      </defs>
+
+      <GlowEffect colour={colour}/>
 
       <g filter="url(#outerGlow)">
         <path d="m18 16 4-4-4-4" />
