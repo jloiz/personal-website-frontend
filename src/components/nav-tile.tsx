@@ -1,6 +1,6 @@
 "use client"
 
-import { Card, CardHeader, CardBody, Divider, Image, Link } from "@heroui/react";
+import { Card, CardHeader, CardBody, Divider } from "@heroui/react";
 import { useRouter } from "next/navigation";
 import CodeIcon from "../sprites/code-icon";
 import ProfileIcon from "../sprites/profile-icon";
