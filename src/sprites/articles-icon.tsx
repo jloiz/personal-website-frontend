@@ -4,7 +4,7 @@ interface PropTypes {
   colour: string;
 }
 
-export default function ProfileIcon({ colour }: PropTypes) {
+export default function ArticlesIcon({ colour }: PropTypes) {
   // This is a customised version of the lucide-react icon
 
   return (
@@ -24,8 +24,10 @@ export default function ProfileIcon({ colour }: PropTypes) {
       <GlowEffect colour={colour} />
 
       <g filter="url(#outerGlow)">
-        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
-        <circle cx="12" cy="7" r="4" />
+        <path d="M15 18h-5" />
+        <path d="M18 14h-8" />
+        <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0v-9a2 2 0 0 1 2-2h2" />
+        <rect width="8" height="4" x="10" y="6" rx="1" />
       </g>
     </svg>
   );
