@@ -9,7 +9,7 @@ export default function Page() {
   return (
     <>
       <div className="flex flex-row item-center mb-2; justify-center">
-        <h1 className="text-3xl font-bold underline">Welcome!</h1>
+        <h1 className="text-3xl font-bold underline mt-3">Welcome!</h1>
       </div>
       <div className="flex flex-row item-center mt-8 justify-center">
         <br />

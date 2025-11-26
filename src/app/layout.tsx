@@ -13,6 +13,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
+    <head>
+      <title>
+        Joshua Loizou
+      </title>
+    </head>
       <body>
         <Provider>
           <div className="flex flex-col min-h-screen">
