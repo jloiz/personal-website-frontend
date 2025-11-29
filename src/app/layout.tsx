@@ -13,6 +13,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
+    <head>
+      <title>
+        Joshua Loizou
+      </title>
+      <link rel="icon" type="image/x-icon" href="/placeholder.gif"/>
+    </head>
       <body>
         <Provider>
           <div className="flex flex-col min-h-screen">

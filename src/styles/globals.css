@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Doto:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
 
 @import "tailwindcss";
 
@@ -16,10 +17,18 @@
   --font-pixel: "Doto";
   --font-orbitron: "Orbitron";
   --font-oxanium: "Oxanium";
+  --font-electrolize: "Electrolize";
 }
 
 html {
   font-family: var(--font-orbitron), basic-sans, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p {
+  font-family: var(--font-electrolize), basic-sans, sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
