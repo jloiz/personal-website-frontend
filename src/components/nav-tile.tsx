@@ -28,6 +28,7 @@ export default function NavTile({ pageName }: PropTypes) {
   return (
     <>
       <Card
+        className="shadow-xl bg-background/20 shadow-blue-500/50 ring-2 ring-blue-500/50 "
         isPressable
         isHoverable={true}
         onPress={() => router.push(`/${pageNameLower}`)}
