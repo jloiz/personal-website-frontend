@@ -11,13 +11,12 @@ export default function () {
       </div>
       <div className="lg:mx-8 mx-4 mt-5 md:flex md:flex-row">
           <div className=" lg:w-1/5 md:w-2/5 lg:mr-10 mr-3 float-left">
-          <Image className="md:w-[300px] w-[150px] mb-2"
+          <Image className="md:w-[300px] w-[150px] lg:w-full lg:h-auto mb-2"
             isBlurred
             src={"/me.jpg"}
             alt={"Image of Joshua"}
           />
           </div>
-        {/*ToDo: Abosolutely find a more legible font for big pieces of text like this*/}
           <div className="lg:w-4/5 md:w-3/5 mb-4">
             <ProfileText/>
           </div>
