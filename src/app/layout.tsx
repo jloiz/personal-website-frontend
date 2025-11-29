@@ -17,6 +17,7 @@ export default function RootLayout({
       <title>
         Joshua Loizou
       </title>
+      <link rel="icon" type="image/x-icon" href="/placeholder.gif"/>
     </head>
       <body>
         <Provider>
