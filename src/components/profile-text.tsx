@@ -2,8 +2,7 @@ export default function ProfileText() {
   return (
     <>
       <p>Hi am and Josh and I like to code things.</p>
-      <br />
-      <p>
+      <p className="mt-3">
         I am a professional software engineer proficient in Typescript, Java,
         Go, and Python, and familiar with C. I have experience working with a
         number of cloud (GCP and AWS) and dev-ops tools, in addition to multiple
@@ -12,14 +11,12 @@ export default function ProfileText() {
         different data (PySpark and Pandas) and non-data-focused Python
         libraries.
       </p>
-      <br />
-      <p>
+      <p className="mt-3">
         If you are visiting from my CV or job application, I'd be glad to
         discuss my skills and experience in further detail.
       </p>
-      <br />
       {/*ToDo: Add link for website frontend directly*/}
-      <p>
+      <p className="mt-3">
         I also like to code for fun and as an opportunity to learn. While I
         understand and utilise the value of AI tooling for productivity in
         professional software development in my day-to-day, my personal projects
@@ -36,25 +33,21 @@ export default function ProfileText() {
           here
         </a>
         .
-      </p>
-      <br />
-      <p>
+      </p >
+      <p className="mt-3">
         Outside of coding, I am a keen runner and triathlete, hoping to one day
         complete an IronMan 70.3. I am also an avid home cook (after having
         worked in this industry professionally) and enjoy creating new recipes
         and trying them out on my partner and friends. I plan on developing a
         system to manage these soon (watch this space!)
       </p>
-      <br />
-
       {/*ToDo: Thesis link once done */}
-      <p>
+      <p className="mt-3">
         My academic background is in theoretical physics, and I enjoy following
         new developments in this field, particularly Graphene, which was the
         topic of my thesis.
       </p>
-      <br />
-      <p>
+      <p className="mt-3">
         If you have made it this far, thank you for reading and I hope you enjoy
         exploring this site!
       </p>

@@ -17,7 +17,9 @@ interface PropTypes {
 export default function NavTile({ pageName }: PropTypes) {
   const router = useRouter()
   const pageNameLower = pageName.toLowerCase()
-  const navItemColour = "#0077FF"
+  //const navItemColour = "#0077FF"
+  // this is tailwind green-500, don't make both match for a bit of contrast
+  const navItemColour = "#22c55e"
   const spriteMap = {
     "profile": <ProfileIcon colour={navItemColour}/>,
     "projects": <CodeIcon colour={navItemColour} />,
@@ -28,7 +30,7 @@ export default function NavTile({ pageName }: PropTypes) {
   return (
     <>
       <Card
-        className="shadow-xl bg-background/20 shadow-blue-500/50 ring-2 ring-blue-500/50 "
+        className="shadow-xl bg-background/20 shadow-green-600/50 ring-2 ring-green-600/50 "
         isPressable
         isHoverable={true}
         onPress={() => router.push(`/${pageNameLower}`)}
