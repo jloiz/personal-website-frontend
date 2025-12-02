@@ -1,7 +1,7 @@
 export default function ProfileText() {
   return (
     <>
-      <p>Hi am and Josh and I like to code things.</p>
+      <p>Hi, I am Josh and I like to code things.</p>
       <p className="mt-3">
         I am a professional software engineer proficient in Typescript, Java,
         Go, and Python, and familiar with C. I have experience working with a
