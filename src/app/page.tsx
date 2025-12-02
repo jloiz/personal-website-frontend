@@ -11,7 +11,7 @@ export default function Page() {
       <div className="flex flex-row item-center mb-2; justify-center">
         <h1 className="text-3xl font-bold underline mt-3">Welcome!</h1>
       </div>
-      <div className="flex flex-row item-center mt-8 justify-center">
+      <div className="flex flex-row item-center mt-5 justify-center">
         <br />
         <p className="text-center mb-8">
           Welcome to my personal site. This is a one of my personal projects.
