@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="mt-5 mb-3 ml-auto pr-8">
           <div className="flex flex-row space-x-4">
             <a
-              href="https://github.com/jloiz/personal-website-frontend"
+              href="https://github.com/jloiz"
               target="_blank"
             >
               <Github />
