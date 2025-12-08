@@ -5,15 +5,28 @@ import {
   Divider,
   Image,
   CardFooter,
+  Button,
+  useDisclosure,
+  Drawer,
+  DrawerBody,
+  DrawerContent
 } from "@heroui/react";
+import { useState } from "react";
 
 interface PropTypes {
   project: string;
 }
 
 export default function ProjectCard({ project }: PropTypes) {
+  const [moreTrayActive, setMoreTrayActive] = useState(false);
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+
+  function handleMoreClick() {
+    return;
+  }
+
   const titleMap = {
-    "website-frontend": "Personal Website - Front-end",
+    "website-frontend": "Personal Website: Front-end",
     "to-do-go": "To Do in Go",
   };
 
@@ -30,16 +43,52 @@ export default function ProjectCard({ project }: PropTypes) {
     ),
     "to-do-go": <Image alt="Golang gopher" height={200} src={"/gopher.png"} />,
   };
-  // ToDo: Ideas for footer content: GitHub icon with gh link, detailed information button, linking to specifics
-  //  of project (maybe can add this to the readme of the project?)
+//ToDo: Componentise buttons and add icon. Add specific text for each
   const footerMap = {
-    "website-frontend": <p>A website to showcase projects and learning</p>,
-    "to-do-go": <p>A CRUD app using Go and Postgres</p>,
+    "website-frontend": (
+      <div className="flex justify-between items-center w-full">
+        <p>A website to showcase projects and learning</p>
+        <div>
+          <Button
+            className="buttonStyle ml-2 mb-1"
+            color="primary"
+            onPress={onOpen}
+          >
+            More
+          </Button>
+          <Button className="buttonStyle ml-2">GitHub</Button>
+        </div>
+      </div>
+    ),
+    "to-do-go": (
+      <div className="flex justify-between items-center w-full">
+        <p>A CRUD app using Go and Postgres</p>
+        <div>
+          <Button
+            className="buttonStyle ml-2 mb-1"
+            color="primary"
+            onPress={onOpen}
+          >
+            More
+          </Button>
+          <Button className="buttonStyle ml-2">GitHub</Button>
+        </div>
+      </div>
+    ),
   };
+
+  const moreMap = {
+    "website-frontend": "Personal Website: Front-end",
+    "to-do-go": "To Do in Go",
+  }
 
   return (
     <>
-      <Card isFooterBlurred={true} isHoverable={true} className="shadow-xl shadow-blue-600/50 ring-2 ring-blue-600/50 ">
+      <Card
+        isFooterBlurred={true}
+        isHoverable={true}
+        className="shadow-xl shadow-blue-600/50 ring-2 ring-blue-600/50 "
+      >
         <CardHeader className="justify-center items-center">
           {titleMap[project]}
         </CardHeader>
@@ -47,6 +96,17 @@ export default function ProjectCard({ project }: PropTypes) {
           {imageMap[project]}
         </div>
         <CardFooter>{footerMap[project]}</CardFooter>
+        <Drawer isOpen={isOpen} onOpenChange={onOpenChange}>
+          <DrawerContent>
+            {(onClose) => (
+              <DrawerBody>
+                <p>
+                  {moreMap[project]}
+                </p>
+              </DrawerBody>
+            )}
+          </DrawerContent>
+        </Drawer>
       </Card>
     </>
   );
