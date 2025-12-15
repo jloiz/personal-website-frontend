@@ -9,9 +9,12 @@ import {
   useDisclosure,
   Drawer,
   DrawerBody,
-  DrawerContent
+  DrawerContent,
+  DrawerHeader,
 } from "@heroui/react";
 import { useState } from "react";
+import ProjectText from "./project-text";
+import GithubButton from "./github-button";
 
 interface PropTypes {
   project: string;
@@ -35,7 +38,6 @@ export default function ProjectCard({ project }: PropTypes) {
       <Image
         removeWrapper
         className=""
-        //width={50}
         height={200}
         alt={"Website image"}
         src={"/website.png"}
@@ -56,7 +58,7 @@ export default function ProjectCard({ project }: PropTypes) {
           >
             More
           </Button>
-          <Button className="buttonStyle ml-2">GitHub</Button>
+          <GithubButton repoLink={"https://github.com/jloiz/personal-website-frontend"}/>
         </div>
       </div>
     ),
@@ -71,7 +73,7 @@ export default function ProjectCard({ project }: PropTypes) {
           >
             More
           </Button>
-          <Button className="buttonStyle ml-2">GitHub</Button>
+          <GithubButton repoLink={"https://github.com/jloiz/to-do-app-in-go"}/>
         </div>
       </div>
     ),
@@ -99,11 +101,14 @@ export default function ProjectCard({ project }: PropTypes) {
         <Drawer isOpen={isOpen} onOpenChange={onOpenChange}>
           <DrawerContent>
             {(onClose) => (
-              <DrawerBody>
-                <p>
-                  {moreMap[project]}
-                </p>
-              </DrawerBody>
+              <>
+                <DrawerHeader className="flex flex-col gap-1">{moreMap[project]}</DrawerHeader>
+
+                <DrawerBody>
+                  <ProjectText/>
+                </DrawerBody>
+              </>
+              // ToDo: Add Github button to drawer footer
             )}
           </DrawerContent>
         </Drawer>
