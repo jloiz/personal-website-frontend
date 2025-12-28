@@ -1,7 +1,5 @@
 import { Button } from "@heroui/react";
-import Github from "../sprites/github";
 import { Image } from "@heroui/react";
-import { link } from "node:fs";
 
 interface PropTypes {
   repoLink: string;
