@@ -1,8 +1,6 @@
 import {
   Card,
   CardHeader,
-  CardBody,
-  Divider,
   Image,
   CardFooter,
   Button,
@@ -11,22 +9,20 @@ import {
   DrawerBody,
   DrawerContent,
   DrawerHeader,
+  DrawerFooter,
 } from "@heroui/react";
-import { useState } from "react";
-import ProjectText from "./project-text";
+import { useMediaQuery } from "react-responsive";
 import GithubButton from "./github-button";
+import WebsiteFrontendText from "./texts/projects/website-frontend-text";
 
 interface PropTypes {
   project: string;
 }
 
 export default function ProjectCard({ project }: PropTypes) {
-  const [moreTrayActive, setMoreTrayActive] = useState(false);
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const isSmallScreen = useMediaQuery({ maxWidth: 640 });
 
-  function handleMoreClick() {
-    return;
-  }
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   const titleMap = {
     "website-frontend": "Personal Website: Front-end",
@@ -45,7 +41,20 @@ export default function ProjectCard({ project }: PropTypes) {
     ),
     "to-do-go": <Image alt="Golang gopher" height={200} src={"/gopher.png"} />,
   };
-//ToDo: Componentise buttons and add icon. Add specific text for each
+
+  const githubButtonsMap = {
+    "website-frontend": (
+      <GithubButton
+        repoLink={"https://github.com/jloiz/personal-website-frontend"}
+      />
+    ),
+    "to-do-go": (
+      <GithubButton
+        repoLink={"https://github.com/jloiz/personal-website-frontend"}
+      />
+    ),
+  };
+
   const footerMap = {
     "website-frontend": (
       <div className="flex justify-between items-center w-full">
@@ -58,7 +67,7 @@ export default function ProjectCard({ project }: PropTypes) {
           >
             More
           </Button>
-          <GithubButton repoLink={"https://github.com/jloiz/personal-website-frontend"}/>
+          {githubButtonsMap[project]}
         </div>
       </div>
     ),
@@ -73,7 +82,7 @@ export default function ProjectCard({ project }: PropTypes) {
           >
             More
           </Button>
-          <GithubButton repoLink={"https://github.com/jloiz/to-do-app-in-go"}/>
+          {githubButtonsMap[project]}
         </div>
       </div>
     ),
@@ -82,7 +91,12 @@ export default function ProjectCard({ project }: PropTypes) {
   const moreMap = {
     "website-frontend": "Personal Website: Front-end",
     "to-do-go": "To Do in Go",
-  }
+  };
+
+  const moreTextMap = {
+    "website-frontend": <WebsiteFrontendText />,
+    "to-do-go": <p></p>,
+  };
 
   return (
     <>
@@ -98,17 +112,27 @@ export default function ProjectCard({ project }: PropTypes) {
           {imageMap[project]}
         </div>
         <CardFooter>{footerMap[project]}</CardFooter>
-        <Drawer isOpen={isOpen} onOpenChange={onOpenChange}>
+        <Drawer
+          isOpen={isOpen}
+          onOpenChange={onOpenChange}
+          {...(!isSmallScreen && { size: "2xl" })}
+        >
           <DrawerContent>
             {(onClose) => (
               <>
-                <DrawerHeader className="flex flex-col gap-1">{moreMap[project]}</DrawerHeader>
+                <DrawerHeader className="flex flex-col gap-1">
+                  {moreMap[project]}
+                </DrawerHeader>
 
-                <DrawerBody>
-                  <ProjectText/>
-                </DrawerBody>
+                <DrawerBody>{moreTextMap[project]}</DrawerBody>
+
+                <DrawerFooter>
+                  <Button color="danger" variant="light" onPress={onClose}>
+                    Close
+                  </Button>
+                  {githubButtonsMap[project]}
+                </DrawerFooter>
               </>
-              // ToDo: Add Github button to drawer footer
             )}
           </DrawerContent>
         </Drawer>

@@ -24,11 +24,7 @@ export default function ProfileText() {
         understanding of the tools I am using and make development reflexive and
         debugging easier by having a better grasp of the core workings of the
         technologies available to me, and 2) Because it is FUN! This website is
-        one of my larger projects; you can find further information about it{" "}
-        <a className="underline" href="/projects">
-          here
-        </a>
-        , and my other projects{" "}
+        one of my projects; you can find further information about it{" "}
         <a className="underline" href="/projects">
           here
         </a>
