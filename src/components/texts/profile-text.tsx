@@ -17,23 +17,34 @@ export default function ProfileText() {
       </p>
       {/*ToDo: Add link for website frontend directly*/}
       <p className="mt-3">
-        I also like to code for fun and as an opportunity to learn. While I
-        understand and utilise the value of AI tooling for productivity in
-        professional software development in my day-to-day, my personal projects
-        are done the old-fashioned way for two reasons: 1) To gain a thorough
-        understanding of the tools I am using and make development reflexive and
-        debugging easier by having a better grasp of the core workings of the
-        technologies available to me, and 2) Because it is FUN! This website is
-        one of my larger projects; you can find further information about it{" "}
-        <a className="underline" href="/projects">
-          here
-        </a>
-        , and my other projects{" "}
+        I enjoy coding not only professionally but also as a way to explore new
+        ideas and continue learning. Although I use on AI tooling in my
+        day‑to‑day work to boost productivity, I intentionally build my personal
+        projects without it. This approach gives me two key benefits:
+      </p>
+      <ul className="list-disc pl-6">
+        <li>
+          <p>
+            It allows me to develop a deep, intuitive understanding of the
+            technologies I’m working with, making problem‑solving and debugging
+            far more natural.
+          </p>
+        </li>
+        <li>
+          <p>
+            It keeps the process genuinely enjoyable—there’s something rewarding
+            about building things from the ground up.
+          </p>
+        </li>
+      </ul>
+      <p>
+        This website is one of those projects; you can find further information
+        about it{" "}
         <a className="underline" href="/projects">
           here
         </a>
         .
-      </p >
+      </p>
       <p className="mt-3">
         Outside of coding, I am a keen runner and triathlete, hoping to one day
         complete an IronMan 70.3. I am also an avid home cook (after having

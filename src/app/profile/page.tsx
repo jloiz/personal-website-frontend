@@ -1,7 +1,7 @@
 "use client";
 // ToDo add path alias
 import { Image } from "@heroui/react"
-import ProfileText from "../../components/profile-text";
+import ProfileText from "../../components/texts/profile-text";
 
 export default function () {
   return (
