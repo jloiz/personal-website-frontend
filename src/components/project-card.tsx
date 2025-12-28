@@ -14,6 +14,7 @@ import {
 import { useMediaQuery } from "react-responsive";
 import GithubButton from "./github-button";
 import WebsiteFrontendText from "./texts/projects/website-frontend-text";
+import ToDoGoText from "./texts/projects/to-do-go-text";
 
 interface PropTypes {
   project: string;
@@ -50,7 +51,7 @@ export default function ProjectCard({ project }: PropTypes) {
     ),
     "to-do-go": (
       <GithubButton
-        repoLink={"https://github.com/jloiz/personal-website-frontend"}
+        repoLink={"https://github.com/jloiz/to-do-app-in-go"}
       />
     ),
   };
@@ -95,7 +96,7 @@ export default function ProjectCard({ project }: PropTypes) {
 
   const moreTextMap = {
     "website-frontend": <WebsiteFrontendText />,
-    "to-do-go": <p></p>,
+    "to-do-go": <ToDoGoText/>
   };
 
   return (
